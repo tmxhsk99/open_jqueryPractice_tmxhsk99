@@ -13,27 +13,29 @@
 <script type="text/javascript" src="js/jquery-3.3.1.min.js?v=<%=System.currentTimeMillis() %>"></script>
 <script type="text/javascript">
 $(function(){
-	$
+	var result_1 =$("#user_name").val();
+	console.log(result_1);//용대리	
+	
+	$("#user_id").val("javascript");
+	
+	var result_2 =$("#user_id").prop("defaultValue");
+	console.log(result_2); //hello
+	
 });
 
 </script>
 </head>
 <body>
-	<div id="wrap">
-		<p><a href="http://easyspub.co.kr" target="_blank">EasysPub</a></p>
-		<p><a href="https://naver.com">Naver</a></p>
-		<p><a href="http://daum.net">Google</a></p>
-		<p><a href="http://google.co.kr">Daum</a></p>
-	</div>
-	<form action="#" method="get" id="member_f">
-		<p>
-			<label for="user_id">아이디</label>
-			<input type="text" name="user_id" id="user_id">
-		</p>
-		<p>
-			<label for="user_pw">비밀번호</label>
-			<input type="password" name="user_pw" id="user_pw">
-		</p>
+	<h1>객체 조작 </h1>
+	<form action="#"  id="form_1">
+	<p>
+		<label for ="user_name">이름</label> <input type="text" name="user_name"
+			id="user_name" value="용대리">
+	</p>
+	<p>
+		<label for ="user_id">아이디</label> <input type="text" name="user_id"
+			id="user_id" value="hello">
+	</p>
 	</form>
 </body>
 </html>
