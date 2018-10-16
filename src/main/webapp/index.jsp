@@ -10,53 +10,22 @@
 <head>
 <meta charset="utf-8">
 <title>Welcome</title>
-<script type="text/javascript"
-	src="js/jquery-3.3.1.min.js?v=<%=System.currentTimeMillis()%>"></script>
+<link rel="stylesheet" type="text/css" href="semantic/semantic.css">
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+<script src="semantic/dist/semantic.js"></script>
 <script type="text/javascript">
 	$(function() {
-		$(".wrap_1 p:first")
-		.text("내용1");
-
-		$(".wrap_1 p.active")
-		.removeClass("active")
-		.addClass("on");
-
-		$(".wrap_1 p:eq(2) a")
-		.attr("href","http://www.naver.com");
-
-		$(".wrap_1 p:eq(3) input").val("Korea");
-
-		$(".wrap_2 p:first").after("<p>After(추가1)</p>");
-		$(".wrap_2 p:first").before("<p>Before(추가2)</p>");
-
-		$(".wrap_3 p")
-		.unwrap()
-		.wrapInner("<strong/>");
+		
 		
 	});
 </script>
 </head>
 <body>
-	<div class="wrap_1">
-		<p>텍스트1</p>
-		<p class="active">내용2</p>
-		<p>
-			<a href="#">네이버</a>
-		</p>
-		<p>
-			<input type="text" value="hello">
-		</p>
-	</div>
-	<div class="wrap_2">
-		<p>내용5</p>
-		<p>내용6</p>
-	</div>
-	<div class="wrap_3">
-		<div>
-			<p>내용7</p>
-			<p>내용8</p>
-			<p>내용9</p>
-		</div>
-	</div>
+<button class="ui button">Follow</button>
+<button class="ui button">Follow</button>
 </body>
 </html>
