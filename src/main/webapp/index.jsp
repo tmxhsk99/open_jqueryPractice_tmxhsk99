@@ -10,32 +10,52 @@
 <head>
 <meta charset="utf-8">
 <title>Welcome</title>
-<script type="text/javascript" src="js/jquery-3.3.1.min.js?v=<%=System.currentTimeMillis() %>"></script>
+<script type="text/javascript"
+	src="js/jquery-3.3.1.min.js?v=<%=System.currentTimeMillis()%>"></script>
 <script type="text/javascript">
-$(function(){
-	var result_1 =$("#user_name").val();
-	console.log(result_1);//용대리	
-	
-	$("#user_id").val("javascript");
-	
-	var result_2 =$("#user_id").prop("defaultValue");
-	console.log(result_2); //hello
-	
-});
+	$(function() {
+		$(".wrap_1 p:first")
+		.text("내용1");
 
+		$(".wrap_1 p.active")
+		.removeClass("active")
+		.addClass("on");
+
+		$(".wrap_1 p:eq(2) a")
+		.attr("href","http://www.naver.com");
+
+		$(".wrap_1 p:eq(3) input").val("Korea");
+
+		$(".wrap_2 p:first").after("<p>After(추가1)</p>");
+		$(".wrap_2 p:first").before("<p>Before(추가2)</p>");
+
+		$(".wrap_3 p")
+		.unwrap()
+		.wrapInner("<strong/>");
+		
+	});
 </script>
 </head>
 <body>
-	<h1>객체 조작 </h1>
-	<form action="#"  id="form_1">
-	<p>
-		<label for ="user_name">이름</label> <input type="text" name="user_name"
-			id="user_name" value="용대리">
-	</p>
-	<p>
-		<label for ="user_id">아이디</label> <input type="text" name="user_id"
-			id="user_id" value="hello">
-	</p>
-	</form>
+	<div class="wrap_1">
+		<p>텍스트1</p>
+		<p class="active">내용2</p>
+		<p>
+			<a href="#">네이버</a>
+		</p>
+		<p>
+			<input type="text" value="hello">
+		</p>
+	</div>
+	<div class="wrap_2">
+		<p>내용5</p>
+		<p>내용6</p>
+	</div>
+	<div class="wrap_3">
+		<div>
+			<p>내용7</p>
+			<p>내용8</p>
+		</div>
+	</div>
 </body>
 </html>
